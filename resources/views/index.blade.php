@@ -7,14 +7,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>CRUD ' WEB</title>
 
-<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-
-bootstrap/5.0.2/css/bootstrap.min.css' />
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.2/css/bootstrap.min.css' />
 
-<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-
-icons/1.5.0/font/bootstrap-icons.min.css' />
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.5.0/font/bootstrap-icons.min.css' />
 
-<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs5/dt-
-1.10.25/datatables.min.css" />
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs5/dt-1.10.25/datatables.min.css" />
 
 </head>
 
@@ -27,12 +24,10 @@ data-bs-backdrop="static" aria-hidden="true">
 <div class="modal-header">
 <h5 class="modal-title" id="exampleModalLabel">Add New Student</h5>
 
-<button type="button" class="btn-close" data-bs-dismiss="modal" aria-
-label="Close"></button>
+<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 
 </div>
-<form action="#" method="POST" id="add_student_form" enctype="multipart/form-data"
-autocomplete="off">
+<form action="#" method="POST" id="add_student_form" enctype="multipart/form-data"autocomplete="off">
 @csrf
 <div class="modal-body p-4 bg-light">
 <div class="row">
@@ -69,8 +64,7 @@ required>
 </div>
 <div class="modal-footer">
 
-<button type="button" class="btn btn-secondary" data-bs-
-dismiss="modal">Close</button>
+<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
 
 <button type="submit" id="add_student_btn" class="btn btn-primary">Add
 Student</button>
@@ -82,8 +76,7 @@ Student</button>
 {{-- add new Student modal end --}}
 {{-- edit Student modal start --}}
 
-<div class="modal fade" id="editStudentModal" tabindex="-1" aria-
-labelledby="exampleModalLabel" data-bs-backdrop="static" aria-hidden="true">
+<div class="modal fade" id="editStudentModal" tabindex="-1" aria-labelledby="exampleModalLabel" data-bs-backdrop="static" aria-hidden="true">
 
 <div class="modal-dialog modal-dialog-centered">
 <div class="modal-content">
@@ -91,8 +84,7 @@ labelledby="exampleModalLabel" data-bs-backdrop="static" aria-hidden="true">
 <div class="modal-header">
 <h5 class="modal-title" id="exampleModalLabel">Edit Student</h5>
 
-<button type="button" class="btn-close" data-bs-dismiss="modal" aria-
-label="Close"></button>
+<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 
 </div>
 <form action="#" method="POST" id="edit_student_form" enctype="multipart/form-data">
@@ -115,8 +107,7 @@ placeholder="Apellidos" required>
 <div class="my-2">
 <label for="email">E-mail</label>
 
-<input type="email" name="email" id="email" class="form-control" placeholder="E-
-mail" required>
+<input type="email" name="email" id="email" class="form-control" placeholder="E-mail" required>
 
 </div>
 <div class="my-2">
@@ -156,8 +147,7 @@ dismiss="modal">Close</button>
 <div class="card-header bg-primary d-flex justify-content-between align-items-center">
 <h3 class="text-light">Manage Student</h3>
 
-<button class="btn btn-light" data-bs-toggle="modal" data-bs-
-target="#addStudentModal"><i class="bi-plus-circle me-2"></i>Add New Student</button>
+<button class="btn btn-light" data-bs-toggle="modal" data-bs-target="#addStudentModal"><i class="bi-plus-circle me-2"></i>Add New Student</button>
 
 </div>
 <div class="card-body" id="show_all_students">
@@ -169,11 +159,9 @@ target="#addStudentModal"><i class="bi-plus-circle me-2"></i>Add New Student</bu
 </div>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script>
 
-<script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-
-bootstrap/5.0.2/js/bootstrap.bundle.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.2/js/bootstrap.bundle.min.js'></script>
 
-<script type="text/javascript" src="https://cdn.datatables.net/v/bs5/dt-
-1.10.25/datatables.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/v/bs5/dt-1.10.25/datatables.min.js"></script>
 
 <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script>
@@ -226,8 +214,7 @@ $("#telefono").val(response.telefono);
 $("#sexo").val(response.sexo);
 $("#foto").html(
 
-`<img src="storage/images/${response.foto}" width="100" class="img-fluid img-
-thumbnail">`);
+`<img src="storage/images/${response.foto}" width="100" class="img-fluid img-thumbnail">`);
 
 $("#student_id").val(response.id);
 $("#student_foto").val(response.foto);

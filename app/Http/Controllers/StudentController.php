@@ -18,8 +18,7 @@ class StudentController extends Controller
 {
 $estu = Student::all();
 $output = '';
-if ($estu->count() > 0) {
-$output .= '<table class="table table-striped table-sm text-center align-middle">
+if ($estu->count() > 0) {$output .= '<table class="table table-striped table-sm text-center align-middle">
 
 <thead>
 <tr>
@@ -37,17 +36,15 @@ foreach ($estu as $est) {
 $output .= '<tr>
 <td>' . $est->id . '</td>
 
-<td><img src="storage/images/' . $est->foto . '" width="50" class="img-thumbnail rounded-
-circle"></td>
+<td><img src="storage/images/' . $est->foto . '" width="50" class="img-thumbnail rounded-circle"></td>
 
-<td>' . $est->nombre . ' ' . $est->nombre . '</td>
+<td>' . $est->nombre . ' ' . $est->apellido . '</td>
 <td>' . $est->email . '</td>
 <td>' . $est->sexo . '</td>
 <td>' . $est->telefono . '</td>
 <td>
 
-<a href="#" id="' . $est->id . '" class="text-success mx-1 editIcon" data-bs-toggle="modal" data-bs-
-target="#editStudentModal"><i class="bi-pencil-square h4"></i></a>
+<a href="#" id="' . $est->id . '" class="text-success mx-1 editIcon" data-bs-toggle="modal" data-bs-target="#editStudentModal"><i class="bi-pencil-square h4"></i></a>
 
 <a href="#" id="' . $est->id . '" class="text-danger mx-1 deleteIcon"><i class="bi-trash h4"></i></a>
 </td>
